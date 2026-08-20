@@ -1,0 +1,97 @@
+/* ==========================================================================
+   Print Stylesheet (@media print) for Clean PDF Export
+   ========================================================================== */
+
+@media print {
+  /* Hide Non-Printable Elements */
+  header,
+  footer,
+  .no-print,
+  .btn,
+  .action-buttons,
+  .theme-toggle,
+  .scroll-top-btn,
+  .nav-mobile,
+  .status-indicator::after {
+    display: none !important;
+  }
+
+  /* Reset Page & Backgrounds */
+  @page {
+    margin: 15mm 12mm 15mm 12mm;
+    size: A4;
+  }
+
+  html, body {
+    background: #ffffff !important;
+    color: #111827 !important;
+    font-size: 11pt !important;
+    line-height: 1.45 !important;
+  }
+
+  .container {
+    max-width: 100% !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  .section {
+    padding-top: 14pt !important;
+    padding-bottom: 14pt !important;
+    border-bottom: 1px solid #e5e7eb !important;
+    break-inside: auto;
+  }
+
+  .section-header {
+    margin-bottom: 8pt !important;
+  }
+
+  .section-title {
+    font-size: 14pt !important;
+    color: #111827 !important;
+  }
+
+  .section-badge {
+    border: 1px solid #d1d5db !important;
+    background: #f3f4f6 !important;
+    color: #374151 !important;
+    padding: 2px 6px !important;
+    font-size: 8pt !important;
+  }
+
+  /* Avoid Breaking Cards across pages */
+  .card,
+  .timeline-item,
+  .project-card,
+  .education-item {
+    break-inside: avoid !important;
+    page-break-inside: avoid !important;
+    background: #ffffff !important;
+    border: 1px solid #e5e7eb !important;
+    box-shadow: none !important;
+    margin-bottom: 8pt !important;
+    padding: 8pt !important;
+  }
+
+  .tag-badge {
+    border: 1px solid #d1d5db !important;
+    background: #f9fafb !important;
+    color: #374151 !important;
+    font-size: 8pt !important;
+    padding: 1px 5px !important;
+  }
+
+  /* Print link destination */
+  a {
+    color: #111827 !important;
+    text-decoration: none !important;
+  }
+
+  p, li, span {
+    color: #374151 !important;
+  }
+
+  h1, h2, h3, h4 {
+    color: #111827 !important;
+  }
+}
